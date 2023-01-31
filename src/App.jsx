@@ -1,10 +1,11 @@
 import Navbar from './components/Navbar';
+import WelcomeView from './components/WelcomeView';
 import Footer from './components/Footer';
 import ToDoList from './components/ToDoList';
 import './App.css';
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import WelcomeView from './components/WelcomeView';
+
 
 
 function App() {

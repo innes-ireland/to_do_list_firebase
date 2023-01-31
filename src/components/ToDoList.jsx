@@ -1,7 +1,11 @@
 import userEvent from "@testing-library/user-event";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { query, orderBy, onSnapshot, limit, } from "firebase/firestore";
+import Item from "./Item"
+import AddListItem from "./AddListItem";
+
 
 
 
@@ -15,7 +19,7 @@ export default function ToDoList() {
             orderBy("createdAt"), //ordering items chronologically
             limit(100) // limit on items to be fetched from the database
         );
-        const unsubscribe = onSnapShot(q, (QuerySnapShot) => { // unsubscribe constant represents onSnapShot method fed props of q and querysnapshot method
+        const unsubscribe = onSnapshot(q, (QuerySnapShot) => { // unsubscribe constant represents onSnapShot method fed props of q and querysnapshot method
             let list = [] // list set to an empty array 
             QuerySnapShot.forEach((doc) => {
                 list.push({ ...doc.data(), id: doc.id })
@@ -34,6 +38,9 @@ export default function ToDoList() {
                 {list?.map((item) => {
                     <Item key={item.id} item={item} /> // if list is true, map through array returning each entry as an object "item"
                 })}
+                <div className="toDoList_form">
+                    <AddListItem />
+                </div>
             </div>
         </div>
     )
