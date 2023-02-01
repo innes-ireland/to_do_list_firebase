@@ -10,6 +10,7 @@ import AddJob from "./AddJob";
 
 
 
+
 export default function ToDoList() {
 
     const [list, setList] = useState([])
@@ -25,6 +26,8 @@ export default function ToDoList() {
                 list.push({ ...doc.data(), id: doc.id })
             });
             setList(list) // list state set to new array
+            const sortedList = list.filter(job => job.uid === user.uid)
+            setList(sortedList)
         })
         return () => unsubscribe
 
