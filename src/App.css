@@ -7,6 +7,26 @@ F6F1D1 - cornsilk
 */
 
 html {
-  color: #F6F1D1;
+  color: #40798C;
+  background-color: #F6F1D1;
 
+}
+
+/* Navbar component Styling */
+
+.navBar_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.blurb {
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar_button {
+  border-style: none;
+  background-color: #F6F1D1;
 }

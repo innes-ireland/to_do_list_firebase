@@ -19,10 +19,11 @@ export default function Navbar() {
     return (
         <div className="navBar_wrapper">
             <div className="blurb">
-                <h2> Welcome to Innes' to do list App</h2>
-                <h5> A react and firebase project</h5>
+                <h5> Innes' to do list App <br></br>
+                    A react and firebase project</h5>
+
             </div>
-            <div className="navbar_button">
+            <div className="navBar_button">
                 {user ? (
                     <button> <img src={logout} onClick={signOut} className="signOut_btn" alt="sign out from the app here" type="button" /> </button> // if the state shows a user logged in it will display the signout button
                 ) : (

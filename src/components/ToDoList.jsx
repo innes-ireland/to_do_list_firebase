@@ -1,10 +1,10 @@
 import userEvent from "@testing-library/user-event";
 import React, { useState, useEffect } from "react";
 import { db } from "../firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { collection, } from "firebase/firestore";
 import { query, orderBy, onSnapshot, limit, } from "firebase/firestore";
-import Item from "./Item"
-import AddListItem from "./AddListItem";
+import Job from "./Job"
+import AddJob from "./AddJob";
 
 
 
@@ -24,22 +24,24 @@ export default function ToDoList() {
             QuerySnapShot.forEach((doc) => {
                 list.push({ ...doc.data(), id: doc.id })
             });
-            setList(list) // list state set to new array 
+            setList(list) // list state set to new array
         })
         return () => unsubscribe
 
     }, []);
+
+
     return (
         <div className="toDoList_Wrapper">
             <div className="toDoList_Header">
                 <h2> Things to do</h2>
             </div>
             <div className="toDoList_items">
-                {list?.map((item) => {
-                    <Item key={item.id} item={item} /> // if list is true, map through array returning each entry as an object "item"
+                {list?.map((job) => {
+                    <Job key={job.id} job={job} /> // if list is true, map through array returning each entry as an object "item"
                 })}
                 <div className="toDoList_form">
-                    <AddListItem />
+                    <AddJob />
                 </div>
             </div>
         </div>
