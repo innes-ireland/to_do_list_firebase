@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import login from "../logos/login.png"
 import logout from "../logos/logout.png"
+import "../App.css"
 
 export default function Navbar() {
     const [user] = useAuthState(auth);
