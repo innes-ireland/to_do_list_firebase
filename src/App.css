@@ -18,6 +18,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #F6F1D1;
 
 }
 
@@ -31,9 +32,60 @@ html {
   background-color: #F6F1D1;
 }
 
-.navBar_wrapper>img {
+button {
   background-color: #F6F1D1;
-  width: 50px;
-  height: 50px;
+  border-style: none;
+}
+
+img {
+  background-color: #F6F1D1;
+  width: 75px;
+  height: 75px;
+
+}
+
+/* To-Do List Styling */
+
+.toDoList_Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toDoList_Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toDoList_Items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Individual Job Styling */
+
+.job_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.deleteJobButton {
+  color: #40798C;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  border-color: #40798C;
   border-radius: 50%;
+}
+
+.editJobButton {
+  height: 30px;
+  color: #40798C;
+  border-style: solid;
+  border-color: #40798C;
+  border-radius: 3px;
 }

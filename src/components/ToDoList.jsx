@@ -42,6 +42,7 @@ export default function ToDoList() {
     return (
         <div className="toDoList_Wrapper">
             <div className="toDoList_Header">
+                <h1> Welcome {user.displayName}</h1>
                 <h2> Things to do</h2>
             </div>
             <div className="toDoList_items">
