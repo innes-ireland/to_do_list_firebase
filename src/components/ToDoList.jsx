@@ -47,7 +47,7 @@ export default function ToDoList() {
             </div>
             <div className="toDoList_items">
                 {list?.map((job) => (
-                    <Job key={job.id} job={job} /> // if list is true, map through array returning each entry as an object "item"
+                    <Job key={job.id} job={job} /> // if list is true, map through array returning each entry as an object "job"
                 ))}
                 <div className="toDoList_form">
                     <AddJob />

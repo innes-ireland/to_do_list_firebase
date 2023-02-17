@@ -4,35 +4,36 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 
 export default function AddJob() {
-    const [job, setJob] = useState("");
+    const [jobDescription, setJobDescription] = useState("");
     const addJob = async (event) => {
         event.preventDefault();
-        if (job.trim() === "") {
+        if (jobDescription.trim() === "") {
             return (
                 alert("please enter valid message"))
         }
 
         const { uid, displayName, photoURL } = auth.currentUser;
         await addDoc(collection(db, "jobs"), {
-            text: job,
+            text: jobDescription,
+            isComplete: false,
             name: displayName,
             avatar: photoURL,
             createdAt: serverTimestamp(),
             uid
 
         });
-        setJob("")
+        setJobDescription("")
     }
     return (
         <div className="add_list_item-wrapper">
-            <form onSubmit={(event) => addJob(event)}>
+            <form className="add_job_form" onSubmit={(event) => addJob(event)}>
                 <input type="text"
                     id="jobInput"
                     name="jobInput"
                     className="jobInput"
                     placeholder="add job here"
-                    value={job}
-                    onChange={(e) => setJob(e.target.value)}
+                    value={jobDescription}
+                    onChange={(e) => setJobDescription(e.target.value)}
                 />
                 <button
                     type="submit"

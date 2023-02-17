@@ -64,13 +64,58 @@ img {
   align-items: center;
 }
 
+/* Add job component styling  */
+
+.add_job_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%
+}
+
+.jobInput {
+  color: #40798C;
+  background-color: #F6F1D1;
+  border-color: #40798C;
+  border-radius: 5px;
+  padding: 5%;
+  border-style: solid;
+}
+
+.submitJobButton {
+  color: #40798C;
+  border-style: solid;
+  border-color: #40798C;
+  border-radius: 5px;
+}
+
 /* Individual Job Styling */
 
 .job_wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.job_text_complete {
+  text-decoration: line-through;
+}
+
+.job_buttons {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.completeJobButton {
+  color: #40798C;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  border-color: #40798C;
+  border-radius: 50%;
 }
 
 .deleteJobButton {
