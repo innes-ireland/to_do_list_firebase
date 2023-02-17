@@ -10,11 +10,16 @@ export default function Job({ job }) {
     const [user] = useAuthState(auth)
 
 
-    const updateStatus = async (id) => {
+    const markAsDone = async (id) => {
 
         await updateDoc(doc(db, "jobs", id), { isComplete: true })
 
     }
+
+    const markAsNotDone = async (id) => {
+        await updateDoc(doc(db, "jobs", id), { isComplete: false })
+    }
+
 
     const handleDelete = async (id) => {
         await deleteDoc(doc(db, "jobs", id));
@@ -27,7 +32,10 @@ export default function Job({ job }) {
                 <h3>{job.text} </h3>
             </div>
             <div className="job_buttons">
-                <button className="completeJobButton" onClick={() => updateStatus(job.id)}> &#10004; </button>
+                {job.isComplete === false ? (
+                    <button className="jobStatusButton" onClick={() => markAsDone(job.id)}> &#10004; </button>) : (
+                    <button className="jobStatusButton" onClick={() => markAsNotDone(job.id)}> &#10004; </button>
+                )}
                 <button className="deleteJobButton" onClick={() => handleDelete(job.id)}> X </button>
             </div>
         </div>

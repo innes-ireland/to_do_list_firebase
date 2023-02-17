@@ -109,15 +109,6 @@ img {
   justify-content: space-between;
 }
 
-.completeJobButton {
-  color: #40798C;
-  width: 30px;
-  height: 30px;
-  border-style: solid;
-  border-color: #40798C;
-  border-radius: 50%;
-}
-
 .deleteJobButton {
   color: #40798C;
   width: 30px;
@@ -127,10 +118,28 @@ img {
   border-radius: 50%;
 }
 
-.editJobButton {
-  height: 30px;
+.jobStatusButton {
   color: #40798C;
+  width: 30px;
+  height: 30px;
   border-style: solid;
   border-color: #40798C;
-  border-radius: 3px;
+  border-radius: 50%;
+}
+
+
+/* footer styling */
+
+.footer_wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  justify-content: space-between;
+  padding-top: 20%;
+}
+
+.accredations {
+  display: flex;
+  flex-direction: column;
+
 }
