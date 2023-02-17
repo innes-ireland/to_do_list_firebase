@@ -12,6 +12,15 @@ html {
 
 }
 
+a {
+  color: #40798C;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #70a9a1;
+}
+
 /* Navbar component Styling */
 
 .navBar_wrapper {
