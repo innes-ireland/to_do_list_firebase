@@ -30,14 +30,14 @@ export default function AddJob() {
                 <input type="text"
                     id="jobInput"
                     name="jobInput"
-                    className="jobInput"
+                    className="job_input"
                     placeholder="add job here"
                     value={jobDescription}
                     onChange={(e) => setJobDescription(e.target.value)}
                 />
                 <button
                     type="submit"
-                    className="submitJobButton">
+                    className="submit_job_button">
                     Add to list
                 </button>
             </form>

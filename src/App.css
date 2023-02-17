@@ -92,7 +92,7 @@ img {
   width: 100%
 }
 
-.jobInput {
+.job_input {
   color: #40798C;
   background-color: #F6F1D1;
   border-color: #40798C;
@@ -101,7 +101,7 @@ img {
   border-style: solid;
 }
 
-.submitJobButton {
+.submit_job_button {
   color: #40798C;
   border-style: solid;
   border-color: #40798C;
@@ -128,7 +128,7 @@ img {
   justify-content: space-between;
 }
 
-.deleteJobButton {
+.delete_job_button {
   color: #40798C;
   width: 30px;
   height: 30px;
@@ -137,7 +137,7 @@ img {
   border-radius: 50%;
 }
 
-.jobStatusButton {
+.job_status_button {
   color: #40798C;
   width: 30px;
   height: 30px;

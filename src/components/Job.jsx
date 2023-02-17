@@ -33,10 +33,10 @@ export default function Job({ job }) {
             </div>
             <div className="job_buttons">
                 {job.isComplete === false ? (
-                    <button className="jobStatusButton" onClick={() => markAsDone(job.id)}> &#10004; </button>) : (
-                    <button className="jobStatusButton" onClick={() => markAsNotDone(job.id)}> &#10004; </button>
+                    <button className="job_status_button" onClick={() => markAsDone(job.id)}> &#10004; </button>) : (
+                    <button className="job_status_button" onClick={() => markAsNotDone(job.id)}> &#10004; </button>
                 )}
-                <button className="deleteJobButton" onClick={() => handleDelete(job.id)}> X </button>
+                <button className="delete_job_button" onClick={() => handleDelete(job.id)}> X </button>
             </div>
         </div>
     )
